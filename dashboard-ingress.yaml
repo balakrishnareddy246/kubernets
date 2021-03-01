@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+name: dashbaord-ingress
+namespace: kubernets-dashbaord
+spec: 
+   rules:
+   - host: dashboard.com
+     http: 
+       paths: 
+       - backend:
+           ServiceName: kubernets-dashbaord
+           ServicePort: 80
+
