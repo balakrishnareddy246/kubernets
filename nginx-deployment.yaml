@@ -1,7 +1,7 @@
 
   name: MyFirstYAMLJob
 
-  git:
+
   - url: "https://mydevcsinstance-mydomain.developer.ocp.oraclecloud.com/mydevcsinstance-mydomain/s/mydevcsinstance-mydomain_my-project_902/scm/employee.git"
     branch: master
     repo-name: origin
@@ -11,7 +11,7 @@
   - maven:
       goals: clean install
       pom-file: "employees-app/pom.xml"
-  after:
+ 
   - artifacts:
       include: "employees-app/target/*"
   settings:
